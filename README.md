@@ -33,12 +33,37 @@ Testing the C Program for the desired output.
 
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
+```
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+int main(){
+int res = mkfifo("/tmp/my_fifo", 0777);
+if (res == 0) printf("FIFO created\n");
+exit(EXIT_SUCCESS);
+}
+```
 
 
 
 
 
 ## OUTPUT
+```
+$ gcc -o named.o named.c
+$./named.o
+```
+```
+FIFO created
+```
+```
+$ ls -l /tmp/my_fifo
+```
+```
+prwxr-xr-x    1 root     root             0 Mar 27 14:45 /tmp/my_fifo
+```
 
 
 # RESULT:
