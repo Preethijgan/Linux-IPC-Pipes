@@ -120,16 +120,15 @@ exit(EXIT_SUCCESS);
 
 ## OUTPUT
 ```
-$ gcc -o named.o named.c
-$./named.o
-```
-```
+$ gcc -o fifo.o fifo.c
+$./fifo.o
+
 FIFO created
 ```
 ```
 $ ls -l /tmp/my_fifo
-```
-```
+
+
 prwxr-xr-x    1 root     root             0 Mar 27 14:45 /tmp/my_fifo
 ```
 
